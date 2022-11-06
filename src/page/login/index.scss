@@ -1,0 +1,71 @@
+.back-icon{
+    margin: 20px 0 0 20px;
+    width: 26px;
+    height: 26px;
+    img{
+        width: 26px;
+        height: 26px;
+    }
+}
+.login-outer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .login-panel{
+        position: absolute;
+        top: 180px;
+        background-image: url("https://s1.ax1x.com/2022/03/23/q3lPFs.png");
+        width: 260px;
+        height: 210px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 20px 30px 0 30px;
+        .login-username{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            span{
+                font-size: 16px;
+            }
+        }
+        .login-password{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            span{
+                font-size: 16px;
+            }
+        }
+        input{
+            height: 12px;
+            width: 160px;
+            margin-left: 10px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            padding: 5px 0px;
+            border-radius: 3px;
+            padding-left:3px;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+        }
+        input:focus{
+            border-color: #66afe9;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+        }
+        .login-submit{
+            width: 80px;
+            height: 40px;
+            background-image: url('https://s1.ax1x.com/2022/03/20/qZ1XND.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 15px;
+            line-height: 36px;
+            color: white;
+        }
+    }
+}

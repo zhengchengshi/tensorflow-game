@@ -1,0 +1,122 @@
+
+@keyframes loading {
+    0%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(400px);
+    }
+    100%{
+        transform: translateX(10px);
+
+    }
+}
+@keyframes roadmove {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(700px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@-webkit-keyframes clockwise {
+    0% { -webkit-transform: rotate(0deg) }
+    100% { -webkit-transform: rotate(360deg) }
+}
+@keyframes clockwise {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+@-webkit-keyframes donut-rotate {
+    0% { -webkit-transform: rotate(0) }
+    50% { -webkit-transform: rotate(-140deg) }
+    100% { -webkit-transform: rotate(0) }
+}
+@keyframes donut-rotate {
+    0% { transform: rotate(0) }
+    50% { transform: rotate(-140deg) }
+    100% { transform: rotate(0) }
+}
+.loading-notice{
+    font-size: 28px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 126px;
+    .loading{
+        margin-top: 20px;
+        .pswp__preloader__icn {
+            opacity:0.75;
+            width: 24px;
+            height: 24px;
+            -webkit-animation: clockwise 500ms linear infinite;
+            animation: clockwise 500ms linear infinite;
+        }
+        
+        /* The idea of animating inner circle is based on Polymer loading indicator by Keanu Lee https://blog.keanulee.com/2014/10/20/the-tale-of-three-spinners.html */
+        .pswp__preloader__cut {
+        position: relative;
+        width: 12px;
+        height: 24px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        
+        .pswp__preloader__donut {
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #000;
+            border-radius: 50%;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        margin:0;
+            -webkit-animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+        animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+        }
+    }
+}
+.loading-background{
+    position: absolute;
+    background-image:url("https://file.zhengchengshi.cn/tensorflow-game-source/game-background.jpg");
+    background-repeat:repeat-x;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.loading-road{
+    position: absolute;
+    bottom: 0;
+    background-image:url("https://file.zhengchengshi.cn/tensorflow-game-source/ground.png");
+    // background-position: 0 13px;
+    background-position-y: bottom;
+    background-repeat:repeat-x;
+    background-size:100%;
+    width: 100%;
+    height: 10vh;
+}
+.loading-maincharacter{
+    position: absolute;
+    bottom: 45px;
+    left: 40px;
+    transform: scale(1.8);
+    z-index: 100;
+    .animation-container{
+        .loading-maincharacter-content{
+            z-index: 10;
+            // animation: loading 5s infinite;
+        }
+
+    }
+}
